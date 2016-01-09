@@ -96,13 +96,14 @@ module.exports = React.createClass({
               cx={cx} cy={cy} 
               circleRadius={props.circleRadius}
               onMouseOver={props.onMouseOver}
+              closeTooltip={props.handleCloseTooltip}
               dataPoint={{xValue: xAccessor(point), yValue: yAccessor(point), seriesName: vnode.point.series.name}}
           />
       );
     }.bind(this));
 
     return (
-      <g>
+      <g className="xxxyyy">
         <g>{regions}</g>
         <g>{lines}</g>
       </g>

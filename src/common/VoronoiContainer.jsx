@@ -24,6 +24,9 @@ module.exports = React.createClass({
     };
   },
 
+  handleCloseTooltip(){
+    this.props.onCloseTooltip();
+  },
   render() {
 
     var props = this.props;

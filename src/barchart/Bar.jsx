@@ -22,13 +22,16 @@ module.exports = React.createClass({
 
   render() {
     return (
-      <rect
-        className='rd3-barchart-bar'
-        {...this.props}
-        fill={this.props.fill}
-        onMouseOver={this.props.handleMouseOver}
-        onMouseLeave={this.props.handleMouseLeave}
-      />
+      <g>
+        <text x={this.props.x+this.props.width/2} y={this.props.y-5} fontSize="20" textAnchor="middle" alignmentBaseline="middle">{this.props.value}</text>
+        <rect
+          className='rd3-barchart-bar'
+          {...this.props}
+          fill={this.props.fill}
+          onMouseOver={this.props.handleMouseOver}
+          onMouseLeave={this.props.handleMouseLeave}
+        />
+      </g>
     );
   }
 });

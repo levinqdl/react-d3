@@ -40,6 +40,7 @@ module.exports = React.createClass({
       <BarContainer
         height={barHeight}
         width={xScale.rangeBand()}
+        value={segment.y}
         x={xScale(segment.x)}
         y={(segment.y >= 0) ? y : y - barHeight}
         fill={colors(colorAccessor(segment, seriesIdx))}

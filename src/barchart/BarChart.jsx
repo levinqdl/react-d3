@@ -42,6 +42,7 @@ module.exports = React.createClass({
       xAxisClassName:         'rd3-barchart-xaxis',
       yAxisClassName:         'rd3-barchart-yaxis',
       yAxisTickCount:         4,
+      xStroke:                '#000'
     };
   },
 
@@ -149,6 +150,7 @@ module.exports = React.createClass({
               horizontalChart={props.horizontal}
               xOrient={props.xOrient}
               yOrient={yOrient}
+              stroke={props.xStroke}
               gridVertical={props.gridVertical}
               gridVerticalStroke={props.gridVerticalStroke}
               gridVerticalStrokeWidth={props.gridVerticalStrokeWidth}

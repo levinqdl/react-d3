@@ -36,11 +36,13 @@ module.exports = React.createClass({
     } else {
       handleMouseOver = handleMouseLeave = null;
     }
+    handleMouseOver = this._showToolTip;
+    handleMouseLeave = this.props.closeToolTip;
 
     return (
-      <g>
+      <g className="vcc">
         <VoronoiCircle
-            handleMouseOver={handleMouseOver}
+            handleMouseOver={handleMouseOver.bind(this, this.props.dataPoint)}
             handleMouseLeave={handleMouseLeave}
             voronoiPath={this._drawPath(props.vnode)}
             cx={props.cx}
@@ -50,6 +52,12 @@ module.exports = React.createClass({
         />
       </g>
     );
+  },
+
+  _showToolTip(dataPoint, event){
+    console.log(event);
+    let x = event.clientX, y = event.clientY;
+    this.props.onMouseOver(x, y, dataPoint);
   },
 
   _animateCircle() {

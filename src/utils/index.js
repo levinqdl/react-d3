@@ -22,7 +22,8 @@ exports.calculateScales = (chartWidth, chartHeight, xValues, yValues) => {
       .range([chartHeight, 0]);
   }
 
-  yScale.domain(d3.extent(yValues));
+  console.log(d3.extent(yValues));
+  yScale.domain(d3.extent(yValues)).nice();
 
   return {
     xScale: xScale,

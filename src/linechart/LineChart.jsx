@@ -129,6 +129,7 @@ module.exports = React.createClass({
               width={innerWidth}
               height={innerHeight}
               onMouseOver={this.onMouseOver}
+              onCloseToolTip={this.onMouseLeave}
               />
           </g>
         </Chart>
