@@ -21,7 +21,7 @@ module.exports =  {
 
   getDimensions() {
     var props = this.props;
-    var {horizontal, margins, viewBoxObject, xOrient, xAxisOffset, yAxisOffset} = props;
+    let {horizontal, margins, viewBoxObject, xOrient, xAxisOffset, yAxisOffset} = props;
     var yOrient = this.getYOrient();
 
     var width, height;
