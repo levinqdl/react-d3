@@ -12,7 +12,7 @@
     "react-component"
   ],
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "react-d3.js",
   "devDependencies": {
     "babel-core": "^6.4.0",
     "babel-loader": "^6.2.1",
