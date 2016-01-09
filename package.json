@@ -55,7 +55,7 @@
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.2.2"
   },
-  "dependencies": {
+  "peerDependencies": {
     "d3": "^3.5.12",
     "react": "^0.14.5"
   },
