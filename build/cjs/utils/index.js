@@ -22,8 +22,11 @@ exports.calculateScales = function(chartWidth, chartHeight, xValues, yValues)  {
       .range([chartHeight, 0]);
   }
 
-  console.log(d3.extent(yValues));
-  yScale.domain(d3.extent(yValues)).nice();
+  let extented = d3.extent(yValues);
+  if ( extented[0] == extented[1] ) {
+    extented[0] = 0;
+  }
+  yScale.domain(extented).nice();
 
   return {
     xScale: xScale,
